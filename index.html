@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+    </head>
+    <body>
+        <div></div>
+        <div class="square">
+            <span class="arthur">Arthur</span>
+            <span class="melo">Melo.</span>
+            <div class="social">
+                <div class="hover">Instagram</div>
+                <div onmouseover="displaylink('github')" class="github">
+                    <img src="./githublogo.png">
+                        <a href="http://github.com/arthurherbert"></a>    
+                    </img>
+                </div>  
+                <div onmouseover="displaylink('behance')" class="behance">
+                    <img src="./behancelogo.png">
+                        <a href=""></a>    
+                    </img>
+                </div>     
+                <div onmouseover="displaylink('instagram')" class="instagram">
+                    <img src="./instagramlogo.png" height="50px">
+                        <a href=""></a>    
+                    </img>
+                </div>  
+                <div onmouseover="displaylink('linkedin')" class="linkedin">
+                    <img src="./linkedinlogo.png" height="50px">
+                        <a href=""></a>    
+                    </img>
+                </div>           
+            </div>
+        </div>
+    </body>
+    <style>
+        body {
+            background-color:black;
+            display: flex;
+            align-items: center;
+            font-family: 'Exo', sans-serif;
+        }
+        .square {
+            width: 590px;
+            height: 220px;
+            margin: auto;
+            border: 1px solid #fff;
+            border-radius:  10px;
+            position:  relative;
+        }
+        .arthur {
+            font-size: 130px;
+            padding: 20px 0 0 20px;
+            color:#fff;
+        }
+        .melo {
+            font-size: 60px;
+            position: relative;
+            padding: 0 0 20px 18;
+            float: right;
+            top: 125;
+            right: 182;
+            color:#fff;
+        }
+        .social {
+            right: -1;
+            top: 0;
+            position: absolute;
+            height: 100%;
+            width: 80px;
+            background-color: #fff;
+        }
+        .github, .behance, .instagram, .linkedin {
+            width: 100%;
+            display:  flex;
+            height: 25%;
+            align-items:  center;
+        }
+        .github > img, .behance > img, .linkedin > img{
+            height: 40px;
+            margin: auto;
+            padding-top: 10px;
+        }
+        .instagram > img{
+            height: 50px;
+            margin: auto;
+            padding-top: 10px;
+        }
+        .hover {
+            width: 100px;
+            height: 70px;
+            position: absolute;
+            top: -5;
+            left: 75px;
+            border-radius: 0px 10px 10px 0px;
+            background-color: #fff;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    <script>
+        displaylink = (el) => {
+            var hover = $('.hover');
+            switch(el) {
+                case 'github':
+                break;
+                case 'instagram':
+                    hover.css({
+                        display:'flex',
+                        top:'75px'
+                    });
+                break;
+                case 'behance':
+                break;
+                case 'linkedin':
+                break;
+            }
+        }
+    </script>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+</html>
